@@ -1,4 +1,5 @@
 const SUPPORTED = ["en", "zh-CN", "zh-TW", "de", "fr", "ja", "ko"];
+const CANONICAL_ORIGIN = "https://www.sportarc.cn";
 
 function normalizeLanguage(value) {
   if (!value) return null;
@@ -43,6 +44,10 @@ function fromCountry(country) {
 export function middleware(context) {
   const { request, redirect, geo } = context;
   const url = new URL(request.url);
+
+  if (url.hostname.toLowerCase() === "sportarc.cn") {
+    return redirect(`${CANONICAL_ORIGIN}${url.pathname}${url.search}`, 301);
+  }
 
   if (url.pathname !== "/" && url.pathname !== "/index.html") {
     return context.next();
