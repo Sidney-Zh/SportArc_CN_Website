@@ -32,7 +32,7 @@
       ]
     },
     {
-      "source": "/assets/site.20260530-2332.css",
+      "source": "/assets/site.20260810.css",
       "headers": [
         {
           "key": "Cache-Control",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "source": "/assets/site.20260530-2332.js",
+      "source": "/assets/site.20260810.js",
       "headers": [
         {
           "key": "Cache-Control",
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "source": "/assets/icon-128.png",
+      "source": "/assets/AppIcon_cornor-128.png",
       "headers": [
         {
           "key": "Cache-Control",
@@ -77,7 +77,7 @@
       ]
     },
     {
-      "source": "/icon.png",
+      "source": "/AppIcon_cornor.png",
       "headers": [
         {
           "key": "Cache-Control",
