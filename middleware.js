@@ -1,61 +1,28 @@
-const SUPPORTED = ["en", "zh-CN", "zh-TW", "de", "fr", "ja", "ko"];
 const CANONICAL_ORIGIN = "https://www.sportarc.cn";
+const SIMPLIFIED_CHINESE_ALIASES = new Set(["/zh-CN", "/zh-CN/", "/zh-CN/index.html"]);
 
-function normalizeLanguage(value) {
-  if (!value) return null;
-  const code = value.toLowerCase();
-  if (
-    code.startsWith("zh-hant")
-    || code.startsWith("zh-tw")
-    || code.startsWith("zh-hk")
-    || code.startsWith("zh-mo")
-  ) {
-    return "zh-TW";
-  }
-  if (code.startsWith("zh")) return "zh-CN";
-  if (code.startsWith("ja")) return "ja";
-  if (code.startsWith("ko")) return "ko";
-  if (code.startsWith("de")) return "de";
-  if (code.startsWith("fr")) return "fr";
-  if (code.startsWith("en")) return "en";
-  return null;
-}
-
-function fromAcceptLanguage(header) {
-  if (!header) return null;
-  return header
-    .split(",")
-    .map((part) => part.trim().split(";")[0])
-    .map(normalizeLanguage)
-    .find(Boolean) || null;
-}
-
-function fromCountry(country) {
-  const code = (country || "").toUpperCase();
-  if (["CN", "SG"].includes(code)) return "zh-CN";
-  if (["TW", "HK", "MO"].includes(code)) return "zh-TW";
-  if (code === "JP") return "ja";
-  if (code === "KR") return "ko";
-  if (["DE", "AT", "CH"].includes(code)) return "de";
-  if (["FR", "BE", "LU", "MC"].includes(code)) return "fr";
-  return null;
+function permanentRedirect(context, url, pathname) {
+  const target = new URL(pathname, CANONICAL_ORIGIN);
+  target.search = url.search;
+  return context.redirect(target.toString(), 301);
 }
 
 export function middleware(context) {
-  const { request, redirect, geo } = context;
+  const { request } = context;
   const url = new URL(request.url);
 
-  if (url.hostname.toLowerCase() === "sportarc.cn") {
-    return redirect(`${CANONICAL_ORIGIN}${url.pathname}${url.search}`, 301);
+  if (SIMPLIFIED_CHINESE_ALIASES.has(url.pathname)) {
+    return permanentRedirect(context, url, "/");
   }
 
-  if (url.pathname !== "/" && url.pathname !== "/index.html") {
-    return context.next();
+  const normalizedPath = url.pathname === "/index.html" ? "/" : url.pathname;
+  if (
+    url.protocol !== "https:"
+    || url.hostname.toLowerCase() !== "www.sportarc.cn"
+    || normalizedPath !== url.pathname
+  ) {
+    return permanentRedirect(context, url, normalizedPath);
   }
 
-  const language = fromAcceptLanguage(request.headers.get("Accept-Language"))
-    || fromCountry(geo && geo.countryCodeAlpha2)
-    || "en";
-  const target = SUPPORTED.includes(language) ? language : "en";
-  return redirect(`${url.origin}/${target}/`, 302);
+  return context.next();
 }
