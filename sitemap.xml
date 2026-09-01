@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.sportarc.cn/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://www.sportarc.cn/en/</loc>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/" />
@@ -14,8 +14,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/" />
   </url>
   <url>
-    <loc>https://www.sportarc.cn/en/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://www.sportarc.cn/</loc>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/" />
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://www.sportarc.cn/zh-TW/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/" />
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://www.sportarc.cn/de/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/" />
@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://www.sportarc.cn/fr/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/" />
@@ -63,7 +63,7 @@
   </url>
   <url>
     <loc>https://www.sportarc.cn/ja/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/" />
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://www.sportarc.cn/ko/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/" />
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/" />
@@ -84,6 +84,90 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.sportarc.cn/ja/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.sportarc.cn/ko/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/" />
+  </url>
+  <url>
+    <loc>https://www.sportarc.cn/en/support/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.sportarc.cn/de/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sportarc.cn/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.sportarc.cn/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.sportarc.cn/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/support/" />
+  </url>
+  <url>
+    <loc>https://www.sportarc.cn/support/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.sportarc.cn/de/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sportarc.cn/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.sportarc.cn/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.sportarc.cn/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/support/" />
+  </url>
+  <url>
+    <loc>https://www.sportarc.cn/zh-TW/support/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.sportarc.cn/de/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sportarc.cn/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.sportarc.cn/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.sportarc.cn/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/support/" />
+  </url>
+  <url>
+    <loc>https://www.sportarc.cn/de/support/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.sportarc.cn/de/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sportarc.cn/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.sportarc.cn/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.sportarc.cn/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/support/" />
+  </url>
+  <url>
+    <loc>https://www.sportarc.cn/fr/support/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.sportarc.cn/de/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sportarc.cn/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.sportarc.cn/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.sportarc.cn/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/support/" />
+  </url>
+  <url>
+    <loc>https://www.sportarc.cn/ja/support/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.sportarc.cn/de/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sportarc.cn/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.sportarc.cn/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.sportarc.cn/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/support/" />
+  </url>
+  <url>
+    <loc>https://www.sportarc.cn/ko/support/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sportarc.cn/en/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.sportarc.cn/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.sportarc.cn/zh-TW/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.sportarc.cn/de/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sportarc.cn/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.sportarc.cn/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.sportarc.cn/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sportarc.cn/support/" />
   </url>
   <url>
     <loc>https://www.sportarc.cn/terms/</loc>

@@ -1,5 +1,10 @@
 const CANONICAL_ORIGIN = "https://www.sportarc.cn";
 const SIMPLIFIED_CHINESE_ALIASES = new Set(["/zh-CN", "/zh-CN/", "/zh-CN/index.html"]);
+const SIMPLIFIED_CHINESE_SUPPORT_ALIASES = new Set([
+  "/zh-CN/support",
+  "/zh-CN/support/",
+  "/zh-CN/support/index.html",
+]);
 
 function permanentRedirect(context, url, pathname) {
   const target = new URL(pathname, CANONICAL_ORIGIN);
@@ -13,6 +18,10 @@ export function middleware(context) {
 
   if (SIMPLIFIED_CHINESE_ALIASES.has(url.pathname)) {
     return permanentRedirect(context, url, "/");
+  }
+
+  if (SIMPLIFIED_CHINESE_SUPPORT_ALIASES.has(url.pathname)) {
+    return permanentRedirect(context, url, "/support/");
   }
 
   const normalizedPath = url.pathname === "/index.html" ? "/" : url.pathname;

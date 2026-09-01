@@ -50,6 +50,24 @@
       ]
     },
     {
+      "source": "/assets/site.20260831.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/site.20260831.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
       "source": "/assets/AppIcon_cornor-128.png",
       "headers": [
         {
