@@ -1,37 +1,27 @@
 const CANONICAL_ORIGIN = "https://www.sportarc.cn";
-const SIMPLIFIED_CHINESE_ALIASES = new Set(["/zh-CN", "/zh-CN/", "/zh-CN/index.html"]);
-const SIMPLIFIED_CHINESE_SUPPORT_ALIASES = new Set([
-  "/zh-CN/support",
-  "/zh-CN/support/",
-  "/zh-CN/support/index.html",
+const PAGE_PATHS = new Set([
+  "/", "/support/", "/support/recording-guide/", "/features/",
+  "/features/table-tennis-ai-coach/", "/features/table-tennis-match-analysis/",
+  "/features/table-tennis-video-editor/", "/features/tennis-video-editor/",
+  "/features/badminton-video-editor/", "/privacy/", "/terms/",
+  "/membership_service_agreement/", "/auto_renewal_subscription_agreement/",
 ]);
 
-function permanentRedirect(context, url, pathname) {
-  const target = new URL(pathname, CANONICAL_ORIGIN);
-  target.search = url.search;
-  return context.redirect(target.toString(), 301);
-}
-
 export function middleware(context) {
-  const { request } = context;
-  const url = new URL(request.url);
-
-  if (SIMPLIFIED_CHINESE_ALIASES.has(url.pathname)) {
-    return permanentRedirect(context, url, "/");
+  const url = new URL(context.request.url);
+  let path = url.pathname.replace(/\/index\.html$/, "/");
+  const locale = path.match(/^\/(en|zh-CN|zh-TW|de|fr|ja|ko)(?=\/|$)/);
+  if (locale) {
+    const rest = path.slice(locale[0].length) || "/";
+    const candidate = rest.endsWith("/") ? rest : rest + "/";
+    // Only redirect known former pages, not arbitrary missing routes.
+    if (candidate === "/" || candidate === "/support/" || (locale[1] === "zh-CN" && PAGE_PATHS.has(candidate))) path = candidate;
   }
-
-  if (SIMPLIFIED_CHINESE_SUPPORT_ALIASES.has(url.pathname)) {
-    return permanentRedirect(context, url, "/support/");
+  if (!path.endsWith("/") && PAGE_PATHS.has(path + "/")) path += "/";
+  if (url.protocol !== "https:" || url.hostname.toLowerCase() !== "www.sportarc.cn" || path !== url.pathname) {
+    const target = new URL(path, CANONICAL_ORIGIN);
+    target.search = url.search;
+    return context.redirect(target.toString(), 301);
   }
-
-  const normalizedPath = url.pathname === "/index.html" ? "/" : url.pathname;
-  if (
-    url.protocol !== "https:"
-    || url.hostname.toLowerCase() !== "www.sportarc.cn"
-    || normalizedPath !== url.pathname
-  ) {
-    return permanentRedirect(context, url, normalizedPath);
-  }
-
   return context.next();
 }
